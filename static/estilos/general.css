@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+#nav-col{
+    background: rgb(255, 255, 255);
+    border-bottom: 0.01vw solid #d0d0d0;
+}
+
+
+
+#row_input{
+    padding: 1rem;
+}
+
+#col_size{
+    padding: 1rem;
+    border-radius: 0.625rem;
+    background: rgb(255, 255, 255);
+    margin: 1rem;
+    color: #0d6efd;
+}
+
+::placeholder {
+     color: #0d6efd; 
+    }
+
+.form-control::placeholder { 
+    color: #0d6efd;
+}
+
+.nav-item{
+    padding-left: 1rem;
+}
+.btn{
+    border-radius: 0.625rem;
+}
+#btn_add{
+    margin-left: 1rem;
+    background: #20BDFF;  
+    background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF); 
+    background: linear-gradient(to right, #A5FECB, #20BDFF); 
+    border-radius: 0.625rem;
+    color: #0d6efd;
+}
+
+
+
+#nav_index{
+    background: #0d6efd; 
+    background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #0d6efd);  
+    background: linear-gradient(to right, #A5FECB, #20BDFF, #0d6efd); 
+    border-radius: 0.625rem;
+
+}
+
+.header {
+    background-color: white;
+    border-color: white;
+    position: fixed;
+    z-index: 100;
+    width: 100%;  
+    display: block;
+}
+#container_p {
+    padding-top: 5rem;
+
+}
+
+#container_s {
+    margin: 1rem;
+}
+
+.bi-plus-circle-fill{
+    margin-right: 10px;
+}
+
+#b_tabla{
+    border-radius: 50px;
+}
+
+#cambio_price{
+
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+
+#cont_in{
+    border-radius: 0.625rem;
+    background: #0d6efd; 
+    background: -webkit-linear-gradient(to right, #0d6efd, #20BDFF, #A5FECB);  
+    background: linear-gradient(to right, #0d6efd, #20BDFF, #A5FECB); 
+    padding: 0.5rem;
+}
+
+#carouselExampleDark{
+    padding-top: 3.5rem;
+}
+
+.form-control:focus {
+    color: #0d6efd;
+  }
+.carousel-caption {
+    
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 1.5vw 2.25vw;
+    text-align: left;
+    width: 8 rem;
+    color: #ffffff;
+
+    margin-top: 5vw;
+}
+
+
+#SLIDE_BG{
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    animation: slideBg 8s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    background-image: url('../img/zapatos1_1.png');
+}
+
+@keyframes slideBg {
+    0% {
+        background-image: url('../img/zapatos1_1.png')
+        }
+    25%{
+        background-image: url('../img/zapatos2_1.png')
+    }
+    50%{
+        background-image: url('../img/zapatos3_1.png')
+    }
+    75%{
+        background-image: url('../img/zapatos4\ _1.png')
+    }
+
+}
+

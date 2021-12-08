@@ -1,0 +1,39 @@
+#logo {
+    
+    background:#0d6efd;
+    display:inline-block;
+    position:relative;
+    
+}
+#img_l{
+    padding-left: 1vw;
+    height:4.1vw;
+    line-height:4.1vw;
+
+}
+  
+#logo:after {
+    content:"";
+    position:absolute;
+    right:-30px;
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 4.1vw solid #0d6efd;
+    z-index:1;
+}
+
+#imagen_bd{
+    width: 5vw; 
+}
+
+#imagen_ed{
+    width: 10vw;
+    padding: 1vw;
+}
+
+#img_edit{
+    width: 13vw;
+    padding-top: 2vw;
+}

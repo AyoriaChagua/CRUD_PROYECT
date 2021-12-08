@@ -1,0 +1,73 @@
+{% extends 'layout_main.html' %}
+
+{% block body %}
+
+<div id="cabecera_slider">
+  <div class="row">
+    <div class="col">
+      <div >
+        <p id="contenido_cabecera"><i>WE HAVE VARIETY FOR YOU</i></p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class='slider'>  
+
+  
+  {% for shoe in shoes %}
+
+    <div class="container">
+      <div class="card">
+        <div class="imgBx">
+          <img src="uploads/{{ shoe[2] }}">
+        </div>
+        <div class="contentBx">
+          <h2>{{ shoe[3] }}</h2>
+          <div class="size">
+            <h3>Size :</h3>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span>
+          </div>
+          <div class="color">
+            <h3><p class="cont_cabecera">S/{{ shoe[1] }}</p></h3>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  {% endfor %}   
+</div>
+
+<div id="contenido_sec">
+  <div class="row">
+    <div class="col">
+      <div class="container" align="center" >
+        <p class="cont_font_n ">
+          <b>YOU ARE FREE TO MAKE YOUR OWN DECISIONS, YOU DECIDE</b>
+        </p>
+        <p>
+          We have all the shoes you can look for, it only takes one click. You can search among different brands in the world
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contenido_vid">
+  <div class="row">
+    <div class="col-6">
+      <video    autoplay loop  muted >
+        <source src="../static/img/tu-ritmo-tus-zapatillas_HuGiHdkm.mp4" type="video/mp4"> 
+      </video>
+    </div>
+    <div class="col-6">
+      <video     autoplay loop  muted>
+        <source src="../static/img/nike-tu-sin-limites-online-video-cuttercom_uNg6bJ8Z.mp4" type="video/mp4"> 
+      </video>
+    </div>
+  
+  </div>
+</div>
+{% endblock %}

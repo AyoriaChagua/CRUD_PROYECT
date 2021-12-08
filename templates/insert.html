@@ -1,0 +1,84 @@
+{% extends 'layout_op.html' %}
+
+{% block body %}
+
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+  <div class="row">
+    <div class="col">
+    <p class="cont_font_n"><b>ADD WHAT YOU <br> NEED
+    </b></p>
+    </div>
+  </div>
+  <div class="row" >
+
+    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 col-9" id="cont_in">
+      <form action="/add" method="POST" enctype="multipart/form-data">
+        <!---->
+        
+        <div class="row" id="row_input">
+          <div class="col-7">
+            <select class="form-control"  name="brands_id" id="select-brand">
+              <option selected>Select the brand</option>
+              {% for brand in brands %}
+              <option  {% if brand[0] == brands_id | int %} selected {% endif %} value="{{ brand[0] }}">{{ brand[1] }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <!---->
+        <div class="row" id="row_input">
+          <div class="col-7">
+            <select class="form-control"  name="model" >
+              <option selected> Select the model </option>
+              {% for mod in models %}
+              <option value="{{ mod[0] }}">{{ mod[1] }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <!---->
+        <div class="row" id="row_input">
+          <div class="col-7" id="col_size">
+            <div class="col" >
+            <p class="form-text">
+              Select one of the available sizes
+            </p>
+          </div>
+          <hr>
+          <div class="col">
+            {% for sizes in size %}
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="size" id="inlineRadio1" value="{{ sizes[0] }}">
+              <label class="form-check-label" for="inlineRadio1"><b>{{ sizes[1] }}</b></label>
+            </div>
+            {% endfor %}
+          </div>
+          </div>
+        </div>
+        <!---->
+        <div class="row" id="row_input">
+          <div class="col-6">
+            <input class="form-control" type="number" name="price" placeholder="Price">
+          </div>
+        </div>
+        <!---->
+        <div class="row" id="row_input">
+          <div class="col-6">
+            <input  type="file" name="image" >
+          </div>
+        </div>
+        <!---->
+        <button type="submit" class="btn btn-primary" id="btn_add">Submit</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
